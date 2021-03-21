@@ -7,6 +7,7 @@ using TesteSys10.Domain.Enums;
 using TesteSys10.Domain.Interfaces.Infra;
 using TesteSys10.Domain.Interfaces.Service;
 using TesteSys10.Domain.Models;
+using TesteSys10.Domain.ViewModel;
 
 namespace TesteSys10.Service.Services.Turma
 {
@@ -38,5 +39,9 @@ namespace TesteSys10.Service.Services.Turma
             var turma = new TurmaModel(command.IdTurma);
             return _turmaRepository.Delete(turma);
         }
+
+        public IEnumerable<TurmaAlunoViewModel> GetRelatorioTurma(int idTurma) => _turmaRepository.GetRelatorioTurma(idTurma);
+
+        public MediaTurmaAlunoViewModel GetMediaTumaAluno(int idTurma) => _turmaRepository.GetMediaTumaAluno(idTurma);
     }
 }

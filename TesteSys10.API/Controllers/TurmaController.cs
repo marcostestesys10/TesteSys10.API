@@ -32,5 +32,11 @@ namespace TesteSys10.API.Controllers
 
         [HttpPut("InativarTurma")]
         public IActionResult Delete([FromBody] InativarTurmaCommand command) => Response(_turmaService.Delete(command));
+
+        [HttpGet("RelatorioTumaAluno/{idTurma}")]
+        public IActionResult GetRelatorioTurma(int idTurma) => Response(_turmaService.GetRelatorioTurma(idTurma));
+
+        [HttpGet("MediaTurmaAluno/{idTurma}")]
+        public IActionResult GetMediaTurmaAluno(int idTurma) => Response(_turmaService.GetRelatorioTurma(idTurma));
     }
 }
