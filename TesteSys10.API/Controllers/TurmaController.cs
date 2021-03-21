@@ -37,6 +37,6 @@ namespace TesteSys10.API.Controllers
         public IActionResult GetRelatorioTurma(int idTurma) => Response(_turmaService.GetRelatorioTurma(idTurma));
 
         [HttpGet("MediaTurmaAluno/{idTurma}")]
-        public IActionResult GetMediaTurmaAluno(int idTurma) => Response(_turmaService.GetRelatorioTurma(idTurma));
+        public IActionResult GetMediaTurmaAluno(int idTurma) => Response(_turmaService.GetMediaTumaAluno(idTurma));
     }
 }
