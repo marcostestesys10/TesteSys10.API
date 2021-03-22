@@ -21,7 +21,7 @@ namespace TesteSys10.API.Controllers
         public IActionResult Post([FromBody] InserirAlunoCommand command) => Response(_alunoService.Post(command));
 
         [HttpPut("InsertNotaAluno")]
-        public IActionResult PutNotaAluno([FromBody] InserirAlunoCommand command) => Response(_alunoService.Post(command));
+        public IActionResult PutNotaAluno([FromBody] InsertNotaAlunoCommand command) => Response(_alunoService.InsertNovaAluno(command));
 
         [HttpPut]
         public IActionResult Put([FromBody] EditarAlunoCommand command) => Response(_alunoService.Put(command));
